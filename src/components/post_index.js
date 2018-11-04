@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchPosts } from '../actions';
 
 class PostsIndex extends Component {
@@ -20,8 +21,15 @@ class PostsIndex extends Component {
   }
 
   render() {
+    // The <Link> element is used instead of the regular anchor (<a>) tag
+    // The <Link> prevent some events invoked from the browser, when used <a> tag
     return (
       <div>
+        <div className="text-xsright">
+          <Link className="btn btn-primary" to="/posts/new">
+            Add a Post
+          </Link>
+        </div>
         <h3>Posts</h3>
         <ul className="list-group">
           {this.renderPosts()}
