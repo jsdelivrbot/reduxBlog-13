@@ -1,4 +1,6 @@
 module.exports = {
+  mode: 'development',
+  performance: { hints: false },
   entry: ['./src/index.js'],
   output: {
     path: __dirname,
@@ -26,5 +28,8 @@ module.exports = {
       aggregateTimeout: 300,
       poll: 1000,
     },
+  },
+  stats: {
+    warnings: false
   },
 };
