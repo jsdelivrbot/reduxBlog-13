@@ -6,7 +6,7 @@ class PostsShow extends Component {
   componentDidMount() {
     const { props } = this;
     const { id } = props.match.params;
-    props.fetchPost(id);
+    props.fetchPosts(id);
   }
 
   render() {
